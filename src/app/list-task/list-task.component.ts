@@ -9,7 +9,7 @@ import { TaskListModel, TaskStatus } from '../models/task-list';
   styleUrls: ['./list-task.component.css']
 })
 export class ListTaskComponent implements OnInit {
-  products: TaskListModel[] = [];
+  
   open : any;
 
   inprogress = [

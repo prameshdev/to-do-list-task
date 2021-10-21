@@ -16,12 +16,13 @@ export class TaskService {
   castUser = this.todoList$.asObservable();
   public getToDoList = () => this.todoList$;
   public addItem = (newItem: TaskListModel) => this.todoArr.unshift(newItem) && this.todoList$.next(this.todoArr);
-   listChanged(): void {
+   // store the data from users
+  listChanged(): void {
      if (this.todoArr.length) {
       localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify(this.todoArr))
      }
    }
-
+   // get the data from local storage
    getLocalStorageList() {
      let ret = [];
      const localStorageStr =  localStorage.getItem(this.LOCAL_STORAGE_KEY);

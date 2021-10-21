@@ -8,16 +8,14 @@ import { TaskService } from '../services/task.service';
   styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent implements OnInit {
-  @Output()
   readonly addEvent = new EventEmitter<TaskListModel>();
   public todoList = new TaskListModel();
-  public mtaskDeatisl: any;
-  taskStatus1 = null;
+  
   taskStatus = TaskStatus;
   enumKeys : any [];
 
   constructor(private taskService: TaskService) {
-    this.enumKeys = Object.keys(this.taskStatus).filter(f => !isNaN(Number(f)));
+    this.enumKeys = Object.keys(this.taskStatus);
    }
 
   ngOnInit(): void {  
