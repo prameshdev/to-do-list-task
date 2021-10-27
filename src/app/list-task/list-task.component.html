@@ -32,8 +32,8 @@
         <!-- starting completed task details -->
         <div class="task-container">
             <h4>Completed</h4>
-            <div cdkDropList [cdkDropListData]="done" class="task-list" (cdkDropListDropped)="dragDrop($event)">
-              <div class="task-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+            <div cdkDropList [cdkDropListData]="Completed" class="task-list" (cdkDropListDropped)="dragDrop($event)">
+              <div class="task-box" *ngFor="let item of Completed" cdkDrag>{{item}}</div>
             </div>
           </div>
           <!-- Ending completed task details -->

@@ -22,7 +22,7 @@ export class AddTaskComponent implements OnInit {
   }
   submitMethod() {
     if (this.todoList.title) {
-      this.taskService.addItem(new TaskListModel(this.todoList.title, this.todoList.description, this.todoList.status));
+      this.taskService.addItem(new TaskListModel(this.todoList.title, this.todoList.description, this.todoList.status,this.todoList.created));
 
       if (this.addEvent) {
         this.addEvent.emit(this.todoList);

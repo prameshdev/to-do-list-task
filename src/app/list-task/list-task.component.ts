@@ -16,7 +16,7 @@ export class ListTaskComponent implements OnInit {
     'Get to work',
   ];
 
-  done = [
+  Completed = [
     'Get to work',
   ];
 
